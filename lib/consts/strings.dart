@@ -3,7 +3,12 @@ const appName = "Shopie Seller App",
     welcome = "Hi, Welcome",
     email = "Email",
     password = "Password",
-    forgotPassword = "Forgot Password",
+    forgotPassword = "Forgot Password?",
     anyProblems = "Any problems contact Admin",
-
-credits ="@Mabans.com";
+    emailHint = "vendor@gmail.com",
+    dashboard = "Dashboard",
+    orders = "Orders",
+    products = "Products",
+    settings = "Settings",
+    passwordHint = "*******",
+    credits = "@Mabans.com";
