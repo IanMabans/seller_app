@@ -1,3 +1,4 @@
+import 'package:seller_app/Widgets/appBarWidget.dart';
 import 'package:seller_app/Widgets/dashboard_button.dart';
 import 'package:seller_app/Widgets/text_style.dart';
 import 'package:seller_app/consts/consts.dart';
@@ -9,21 +10,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: boldText(text: dashboard, size: 16.0, color: darkGrey),
-        actions: [
-          Center(
-              child: normalText(
-                  text: intl.DateFormat('EEE, MMM d, ' 'yyyy')
-                      .format(DateTime.now()),
-                  color: purpleColor)),
-          10.widthBox,
-        ],
-      ),
+      appBar: appBarWidget(dashboard),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,6 +34,21 @@ class HomeScreen extends StatelessWidget {
             10.heightBox,
             const Divider(),
             10.heightBox,
+            boldText(text: popular, color: fontGrey, size: 16.0),
+            20.heightBox,
+            Expanded(
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                children: List.generate(3, (index) => ListTile(
+                  onTap: () {
+
+                  },
+                  leading: Image.asset(imgProduct,width: 100,height: 100,fit: BoxFit.cover,),
+                  title: boldText(text: "Product title", color: darkGrey,size: 14.0),
+                  subtitle: normalText(text: "\$40.00",color: darkGrey,),
+                )),
+              ),
+            )
 
           ],
         ),
