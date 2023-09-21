@@ -12,10 +12,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: purpleColor,
-      // appBar: AppBar(
-      //   backgroundColor: purpleColor,
-      // ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -37,7 +35,9 @@ class LoginScreen extends StatelessWidget {
                   boldText(text: appName, size: 20.0),
                 ],
               ),
-              60.heightBox,
+              40.heightBox,
+              normalText(text: loginTo,size: 18.0, color: lightGrey),
+              10.heightBox,
               Column(
                 children: [
                   TextFormField(
