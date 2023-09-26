@@ -1,6 +1,5 @@
 import 'package:seller_app/Widgets/appBarWidget.dart';
 import 'package:seller_app/consts/consts.dart';
-import 'package:intl/intl.dart' as intl;
 
 import '../../Widgets/text_style.dart';
 
