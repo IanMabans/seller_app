@@ -26,6 +26,7 @@ const appName = "Shopie Seller App",
     name = "Username",
     confirmPass = "Confirm Password",
     save = "Save",
+    chats = "Chats",
     remove = "Remove",
     passwordHint = "*******",
     credits = "@Mabans";

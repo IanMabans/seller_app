@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:seller_app/Widgets/text_style.dart';
 import 'package:seller_app/consts/consts.dart';
+import 'package:seller_app/views/messages_screen/messages_screen.dart';
 import 'package:seller_app/views/profile_screen/edit_profile_screen.dart';
+import 'package:seller_app/views/shop_screen/shop_settings_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -44,6 +45,17 @@ class ProfileScreen extends StatelessWidget {
               children: List.generate(
                   profileButtonsIcons.length,
                   (index) => ListTile(
+                    onTap: () {
+                      switch (index) {
+                        case 0:
+                          Get.to(() => const ShopSettings());
+                          break;
+                      case 1:
+                      Get.to(() => const MessagesScreen());
+                      break;
+                      default:
+                      }
+                    },
                         leading: Icon(profileButtonsIcons[index], color: white),
                         title: normalText(
                             text: profileButtonsTitles[index], color: white),
