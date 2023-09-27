@@ -1,6 +1,9 @@
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:seller_app/Widgets/appBarWidget.dart';
 import 'package:seller_app/consts/consts.dart';
 import 'package:intl/intl.dart' as intl;
+import 'package:seller_app/views/orders%20_screen/order_details.dart';
 
 import '../../Widgets/text_style.dart';
 
@@ -21,7 +24,9 @@ class OrdersScreen extends StatelessWidget {
                 (index) => ListTile(
                   tileColor: Colors.white38,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => const OrderDetails());
+                  },
                   // leading: Image.asset(
                   //   imgProduct,
                   //   width: 100,

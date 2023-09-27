@@ -1,5 +1,9 @@
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:seller_app/Widgets/appBarWidget.dart';
 import 'package:seller_app/consts/consts.dart';
+import 'package:seller_app/views/products_screen/add_product.dart';
+import 'package:seller_app/views/products_screen/product_details.dart';
 
 import '../../Widgets/text_style.dart';
 
@@ -10,7 +14,9 @@ class ProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => const AddProduct());
+          },
           backgroundColor: red,
           elevation: 2.0,
           child: const Icon(Icons.add)),
@@ -24,7 +30,9 @@ class ProductsScreen extends StatelessWidget {
               20,
               (index) => Card(
                 child: ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => const ProductDetails());
+                  },
                   leading: Image.asset(
                     imgProduct,
                     width: 100,
